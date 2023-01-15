@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="form-container">
+      <h1>GENERATE SOME DANK MEMES</h1>
+      <img
+        id="luaghing-image"
+        src="https://cdn-icons-png.flaticon.com/128/2958/2958908.png"
+      />
+      <form id="meme-generating-form">
+        <div class="input-container">
+          <label>IMAGE URL</label>
+          <input id="input" type="text" name="image_url" value="" />
+        </div>
+        <div class="input-container">
+          <label>TOP TEXT</label>
+          <input id="input" type="text" />
+        </div>
+        <div class="input-container">
+          <label>BOTTOM TEXT</label>
+          <input id="input" type="text" />
+        </div>
+        <input id="meme-form-submission" type="submit" />
+      </form>
+    </div>
+    <div id="user-generated-content"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
