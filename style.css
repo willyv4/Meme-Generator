@@ -125,10 +125,17 @@ label, #input {
 
 label {
     padding-bottom: 20px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+@media (max-width: 450px) {
+    label {
+        font-size: 10px;
+    }
+}
+
 
 h1 {
     font-weight: bold;
@@ -166,7 +173,7 @@ h1 {
 #luaghing-image {
     position: absolute;
     padding: 10px;
-    padding-right: 80px;
+    padding-right: 50px;
     top: 0;
     right: 0;
     height: 8vw;
