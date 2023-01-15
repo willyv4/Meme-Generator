@@ -47,16 +47,19 @@ html, body {
 
 .top-text {
     position: absolute;
-    top: 13%;
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;
+    
 }
 
 .bottom-text {
     position: absolute;
-    bottom: 5%;
+    bottom: -3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 .hover-text{
@@ -111,12 +114,13 @@ label, #input {
 
 #input:hover {
     border: 2px solid salmon;
-    transition: .8s;
+    transition: 1s;
     box-shadow: salmon 0px 0px 10px -5px;
 }
 
 .input-container:hover {
     color: salmon;
+    transition: 1s;
 }
 
 label {
@@ -148,24 +152,24 @@ h1 {
     color: white;
     height: 60px;
     margin-top: 145px;
-    font-size: 2vw;
+    font-size: 140%;
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #meme-form-submission:hover {
     color: salmon;
-    font-size: 2.5vw;
+    font-size: 160%;
     transition: .8s;
 }
 
 #luaghing-image {
     position: absolute;
     padding: 10px;
-    padding-right: 50px;
+    padding-right: 80px;
     top: 0;
     right: 0;
-    height: 9vw;
-    width: 9vw;
+    height: 8vw;
+    width: 8vw;
 }
 
