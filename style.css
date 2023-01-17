@@ -20,8 +20,10 @@ html, body {
 }
 
 .content-container {
-    width: 22.5%;
-    height: 22.5%;
+    width: 30%;
+    height: 30%;
+    min-width: 300px;
+    min-height: 300px;
     margin: 5px;
     margin-top: 10px;
     padding: 10px;
@@ -50,8 +52,6 @@ html, body {
     top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    
 }
 
 .bottom-text {
@@ -59,7 +59,6 @@ html, body {
     bottom: -3%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
 }
 
 .hover-text{
@@ -74,7 +73,7 @@ html, body {
 p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    font-size: 2vw;
+    font-size: 4vw;
     text-shadow: -1px -1px 0 #000,
                   1px -1px 0 #000,    
                  -1px 1px 0 #000,    
