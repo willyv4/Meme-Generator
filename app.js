@@ -10,8 +10,7 @@ form.addEventListener("submit", function (event) {
   const imgURL = memeFormInput[0].value;
   const topText_UserInput = memeFormInput[1].value;
   const bottomText_UserInput = memeFormInput[2].value;
-  const urlRegex =
-    /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+  const urlRegex = /^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim;
 
   if (!imgURL) {
     imgInput.style.borderColor = "red";
