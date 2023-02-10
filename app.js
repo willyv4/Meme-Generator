@@ -1,15 +1,32 @@
-const formSubmissionId = document.getElementById("meme-form-submission");
+const form = document.getElementById("meme-generating-form");
 const memeFormInput = document.querySelectorAll("input");
 
 // Listen for meme form submission
-formSubmissionId.addEventListener("click", function (event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Get user input from form
+  const imgInput = memeFormInput[0];
   const imgURL = memeFormInput[0].value;
   const topText_UserInput = memeFormInput[1].value;
   const bottomText_UserInput = memeFormInput[2].value;
+  const urlRegex =
+    /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 
+  if (!imgURL) {
+    imgInput.style.borderColor = "red";
+    imgInput.style.boxShadow = "0px 0px 8px -3px red";
+    imgInput.value = "NO URL ENTERED";
+    return false;
+  } else if (!urlRegex.test(imgURL)) {
+    imgInput.style.borderColor = "red";
+    imgInput.style.boxShadow = "0px 0px 10px -8px red";
+    imgInput.value = "INVALID URL";
+    return false;
+  } else {
+    imgInput.style.borderColor = "grey";
+    imgInput.style.boxShadow = "none";
+  }
   // create a div to wrap each element
   let userGeneratedContent = document.getElementById("user-generated-content");
   let wrapper = document.createElement("div");
@@ -40,13 +57,13 @@ formSubmissionId.addEventListener("click", function (event) {
   let hoverText = document.createElement("p");
   hoverText.textContent = "X";
   hoverText.classList.add("hover-text");
-  hoverText.style.visibility = "hidden";
+  hoverText.style.opacity = 0;
+  hoverText.style.transition = "opacity 0.3s ease";
   wrapper.addEventListener("mouseover", function () {
-    hoverText.style.visibility = "visible";
-    hoverText.style.transition = ".3s";
+    hoverText.style.opacity = 1;
   });
   wrapper.addEventListener("mouseout", function () {
-    hoverText.style.visibility = "hidden";
+    hoverText.style.opacity = 0;
   });
   wrapper.append(hoverText);
 

@@ -1,6 +1,7 @@
-html, body {
+body {
     margin: 0px;
     padding: 0px;
+    width: 100%;
 }
 
 #user-generated-content {
@@ -67,6 +68,7 @@ html, body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     opacity: .6;
     text-shadow: none;
+    transition: visibility 0.5s ease-in-out;
 }
 
 
@@ -88,6 +90,8 @@ form {
     justify-content: space-between;
     padding-bottom: 60px;
     margin-bottom: 60px;
+    padding-top: 30px;
+
 }
 
 .input-container {
@@ -98,6 +102,7 @@ form {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    transition: color .5s ease-out;
 }
 
 label, #input {
@@ -107,19 +112,13 @@ label, #input {
 }
 
 #input {
-    border-radius: 5px;
+    border-radius: 3px;
     height: 25px;
-}
-
-#input:hover {
-    border: 2px solid salmon;
-    transition: 1s;
-    box-shadow: salmon 0px 0px 10px -5px;
+    border: solid 1.5px grey;
 }
 
 .input-container:hover {
     color: salmon;
-    transition: 1s;
 }
 
 label {
@@ -136,46 +135,99 @@ label {
 }
 
 
-h1 {
-    font-weight: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: 2%;
-    height: 60px;
-    margin: 0px;
-    padding-top: 25px;
-    font-size: 4vw;
-}
-
-#form-container {
+.form-container {
     background-color: azure;
 }
 
 #meme-form-submission {
     position: absolute;
     border: none;
-    background-color: black;
+    background-color: white;
     width: 100%;
-    color: white;
+    color: grey;
+    border: 1.5px solid rgb(0, 0, 0);
     height: 60px;
     margin-top: 145px;
     font-size: 140%;
     font-weight: bold;
+    text-transform: uppercase;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: font-size .4s ease-in-out, color .4s ease-in-out;
 }
 
 #meme-form-submission:hover {
     color: salmon;
     font-size: 160%;
-    transition: .8s;
 }
 
 #luaghing-image {
+    top: 10px;
+    left: 10px;
+    height: 85px;
+    width: 85px;
     position: absolute;
-    padding: 10px;
-    padding-right: 50px;
-    top: 0;
-    right: 0;
-    height: 8vw;
-    width: 8vw;
+    background-color: azure;
+    z-index: 2;
+    opacity: .3;
+    border-radius: 100px;
 }
+
+#shade {
+    height: 89px;
+    width: 335px;
+    position: absolute;
+    background: linear-gradient(to right, black, black, rgba(0, 0, 0, 0.905), rgba(0, 0, 0, 0.786), rgba(0, 0, 0, 0.057));
+    z-index: 1;
+}
+
+h1 {
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    padding: 10px;
+    color: azure;
+    margin-left: 20px;
+    font-style: italic;
+}
+
+.slide {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#div1 {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+
+#div2 {
+    display: inline-block;
+    animation: marquee2 30s linear infinite;
+    animation-delay: 15s;
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee2 {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+  }
+  
+
+
+
+
+  
 
