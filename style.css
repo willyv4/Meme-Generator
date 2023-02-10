@@ -198,13 +198,13 @@ h1 {
 
 #div1 {
     display: inline-block;
-    animation: marquee 30s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 #div2 {
     display: inline-block;
-    animation: marquee2 30s linear infinite;
-    animation-delay: 15s;
+    animation: marquee2 20s linear infinite;
+    animation-delay: 10s;
 }
 
 @keyframes marquee {
