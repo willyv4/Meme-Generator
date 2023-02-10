@@ -10,14 +10,22 @@ form.addEventListener("submit", function (event) {
   const imgURL = memeFormInput[0].value;
   const topText_UserInput = memeFormInput[1].value;
   const bottomText_UserInput = memeFormInput[2].value;
-  const urlRegex = /^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim;
+
+  function isValidUrl(string) {
+    try {
+      new URL(string);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
 
   if (!imgURL) {
     imgInput.style.borderColor = "red";
     imgInput.style.boxShadow = "0px 0px 8px -3px red";
     imgInput.value = "NO URL ENTERED";
     return false;
-  } else if (!urlRegex.test(imgURL)) {
+  } else if (!isValidUrl(imgURL)) {
     imgInput.style.borderColor = "red";
     imgInput.style.boxShadow = "0px 0px 10px -8px red";
     imgInput.value = "INVALID URL";
