@@ -116,6 +116,7 @@ label, #input {
     height: 25px;
     border: solid 1.5px grey;
     outline: none;
+    font-size: 16px;
 }
 
 .input-container:hover {
