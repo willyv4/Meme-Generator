@@ -22,7 +22,7 @@ body {
 
 .content-container {
     width: 30%;
-    height: 30%;
+    height: fit-content;
     min-width: 300px;
     min-height: 300px;
     margin: 5px;
@@ -115,6 +115,7 @@ label, #input {
     border-radius: 3px;
     height: 25px;
     border: solid 1.5px grey;
+    outline: none;
 }
 
 .input-container:hover {
